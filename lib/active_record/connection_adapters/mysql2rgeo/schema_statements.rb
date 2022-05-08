@@ -70,8 +70,8 @@ module ActiveRecord
         end
 
         # override
-        def create_table_definition(*args, **options)
-          Mysql2Rgeo::TableDefinition.new(self, *args, **options)
+        def create_table_definition(name, **options)
+          Mysql2Rgeo::TableDefinition.new(self, name, **options)
         end
 
         # override
